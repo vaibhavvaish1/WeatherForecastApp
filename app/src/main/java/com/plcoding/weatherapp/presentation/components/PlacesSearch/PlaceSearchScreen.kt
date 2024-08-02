@@ -1,4 +1,4 @@
-package com.plcoding.weatherapp.presentation
+package com.plcoding.weatherapp.presentation.components.PlacesSearch
 
 import Place
 import androidx.compose.foundation.clickable
@@ -18,7 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.zIndex
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.nominatim.ui.PlacesViewModel
+import com.plcoding.weatherapp.presentation.components.WeatherCardAndForecast.WeatherViewModel
 import com.plcoding.weatherapp.presentation.ui.theme.DarkBlue
 
 @Composable

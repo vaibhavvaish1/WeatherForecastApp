@@ -1,21 +1,23 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
-#
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# Retrofit
+-keep class retrofit2.** { *; }
+-keep class okhttp3.** { *; }
+-keep class okio.** { *; }
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# Gson
+-keep class com.google.gson.** { *; }
+-keep class com.google.gson.internal.** { *; }
+-keep class com.google.gson.reflect.** { *; }
+-keep class com.google.gson.stream.** { *; }
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# Moshi
+-keep class com.squareup.moshi.** { *; }
+-keep class com.squareup.moshi.JsonClass { *; }
+-keep class com.squareup.moshi.Json { *; }
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# Your data classes and API interfaces
+# Keep all classes and fields in the package that are used for Retrofit API calls
+-keep class com.plcoding.weatherapp.data.remote.model.** { *; }
+-keep class com.plcoding.weatherapp.data.remote.api.** { *; }
+
+# Keep all classes used by Moshi or Gson for serialization/deserialization
+-keep class com.plcoding.weatherapp.data.model.** { *; }

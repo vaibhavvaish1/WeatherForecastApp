@@ -1,4 +1,4 @@
-package com.plcoding.weatherapp.presentation
+package com.plcoding.weatherapp.presentation.components.WeatherCardAndForecast
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer

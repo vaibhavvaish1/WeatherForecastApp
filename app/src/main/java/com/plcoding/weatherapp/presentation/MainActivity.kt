@@ -15,7 +15,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.nominatim.ui.PlacesViewModel
+import com.plcoding.weatherapp.presentation.components.PlacesSearch.PlacesViewModel
+import com.plcoding.weatherapp.presentation.components.PlacesSearch.PlaceSearchScreen
+import com.plcoding.weatherapp.presentation.components.WeatherCardAndForecast.WeatherCard
+import com.plcoding.weatherapp.presentation.components.WeatherCardAndForecast.WeatherForecast
+import com.plcoding.weatherapp.presentation.components.WeatherCardAndForecast.WeatherViewModel
 import com.plcoding.weatherapp.presentation.ui.theme.DarkBlue
 import com.plcoding.weatherapp.presentation.ui.theme.DeepBlue
 import com.plcoding.weatherapp.presentation.ui.theme.WeatherAppTheme

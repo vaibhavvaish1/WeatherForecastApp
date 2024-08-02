@@ -1,4 +1,4 @@
-package com.example.nominatim.ui
+package com.plcoding.weatherapp.presentation.components.PlacesSearch
 
 import Place
 import androidx.lifecycle.ViewModel

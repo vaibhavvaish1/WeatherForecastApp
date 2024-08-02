@@ -1,4 +1,4 @@
-package com.plcoding.weatherapp.presentation
+package com.plcoding.weatherapp.presentation.components.WeatherCardAndForecast
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
