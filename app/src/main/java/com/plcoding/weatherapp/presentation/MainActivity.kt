@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.plcoding.weatherapp.presentation.components.LoadingScreen
 import com.plcoding.weatherapp.presentation.components.PlacesSearch.PlacesViewModel
 import com.plcoding.weatherapp.presentation.components.PlacesSearch.PlaceSearchScreen
 import com.plcoding.weatherapp.presentation.components.WeatherCardAndForecast.WeatherCard
@@ -44,7 +45,6 @@ class MainActivity : ComponentActivity() {
         ))
 
         setContent {
-            val apiKey = "80cf8404123635fff2c086149b1cfbeb"
             WeatherAppTheme {
                 Scaffold(
                     topBar = {
@@ -68,7 +68,7 @@ class MainActivity : ComponentActivity() {
                             ) {
                                 // PlaceSearchScreen at the top
                                 PlaceSearchScreen(
-                                    PlacesViewModel(apiKey),
+                                    PlacesViewModel(),
                                     viewModel
                                 )
 
@@ -87,13 +87,9 @@ class MainActivity : ComponentActivity() {
                                 WeatherForecast(state = viewModel.state)
                             }
 
-                            // Display CircularProgressIndicator if loading
+                            // Display custom LoadingScreen if loading
                             if (viewModel.state.isLoading) {
-                                CircularProgressIndicator(
-                                    modifier = Modifier
-                                        .align(Alignment.Center)
-                                        .padding(16.dp)
-                                )
+                                LoadingScreen()
                             }
 
                             // Display error message if there is an error
